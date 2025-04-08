@@ -14,9 +14,9 @@ return new class extends Migration
         Schema::create('carts', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('user_id');
-            $table->json('items'); // Pohranjuje proizvode u JSON formatu
-            $table->decimal('totalPrice', 10, 2); // Ukupna cena
-            $table->integer('totalQuality'); // Ukupna kolicina
+            $table->json('items'); 
+            $table->decimal('totalPrice', 10, 2); 
+            $table->integer('totalQuality');
             $table->timestamps();
         });
     }
