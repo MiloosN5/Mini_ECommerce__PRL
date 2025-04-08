@@ -1,0 +1,26 @@
+@use "../helpers/functions" as f;
+
+.products-section {
+    &__wrapper {
+        h2 {
+            &:before {
+                content: "Products";
+            }
+        }
+    }
+
+    &__empty {
+        display: flex;
+        flex-direction: column;
+        padding: f.rem(10) f.rem(20);
+        gap: 10px;
+
+        p {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: f.rem(10) f.rem(20);
+            border: f.rem(1) solid var(--comColor);
+        }
+    }
+}

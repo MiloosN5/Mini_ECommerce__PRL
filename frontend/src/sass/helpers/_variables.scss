@@ -1,0 +1,7 @@
+@use './functions' as f;
+
+$breakpoint: (
+    'mobileLandscape': f.rem(475),
+    'tablet': f.rem(768),
+    'desktop': f.rem(992) 
+);

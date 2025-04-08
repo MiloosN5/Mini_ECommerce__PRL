@@ -1,0 +1,60 @@
+@use "../helpers/functions" as f;
+@use "../helpers/mixins" as m;
+
+.CTA-section {
+    svg {
+        width: auto;
+        height: f.rem(20);
+    }
+
+    &__action {
+        max-width: 100%;
+        overflow: hidden;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: f.rem(10);
+        align-items: center;
+        transition: 0.5s ease-in-out;
+        align-self: normal;
+        text-align: center;
+
+        svg {
+            display: none;
+        }
+
+        input {
+            margin-inline: auto;
+        }
+    }
+
+    &__actionTitle {
+        padding: f.rem(10) f.rem(20);
+        border: f.rem(1) solid var(--comColor);
+    }
+
+    & __anchor {
+        &--actionBtn {
+            height: 100%;
+        }
+    }
+}
+
+@include m.breakpoint-up("mobileLandscape") {
+    .CTA-section {
+        &__action {
+            grid-template-columns: 1fr f.rem(60);
+        }
+    }
+}
+
+@include m.breakpoint-up("tablet") {
+    .CTA-section {
+        &__action {
+            grid-template-columns: minmax(30%, 1fr) auto f.rem(60);
+
+            svg {
+                display: block;
+            }
+        }
+    }
+}

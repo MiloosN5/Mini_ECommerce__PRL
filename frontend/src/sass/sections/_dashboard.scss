@@ -1,0 +1,53 @@
+@use "../helpers/functions" as f;
+@use "../helpers/mixins" as m;
+
+.dashboard-section {
+    &__message {
+        font-family: "WindSong", cursive;
+        font-weight: 900;
+        font-style: normal;
+        font-size: 10vw;
+        text-align: center;
+    }
+
+    &__quantity {
+        display: flex;
+        align-items: center;
+        padding: f.rem(10) f.rem(20);
+        border: f.rem(1) solid var(--comColor);
+    }
+
+    &__price {
+        display: flex;
+        align-items: center;
+        padding: f.rem(10) f.rem(20);
+        border: f.rem(1) solid var(--comColor);
+    }
+
+    &__noUser {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        max-width: f.rem(600);
+        gap: f.rem(20);
+        width: 100%;
+        border: f.rem(1) solid var(--comColor);
+        aspect-ratio: 1/1;
+
+        p {
+            display: flex;
+            align-items: center;
+            padding: f.rem(10) f.rem(20);
+            border: f.rem(1) solid var(--comColor);
+        }
+    }
+}
+
+@include m.breakpoint-up("tablet") {
+    .dashboard-section {
+        &__message {
+            font-size: f.rem(80);
+        }
+    }
+}

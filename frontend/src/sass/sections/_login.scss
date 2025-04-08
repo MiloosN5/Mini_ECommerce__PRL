@@ -1,0 +1,9 @@
+.login-section {
+    &__wrapper {
+        h2 {
+            &:before {
+                content: "Login";
+            }
+        }
+    }
+}

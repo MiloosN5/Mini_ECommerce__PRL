@@ -1,0 +1,127 @@
+@use "../helpers/functions" as f;
+@use "../helpers/mixins" as m;
+
+.button {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: f.rem(10) f.rem(20);
+    font-weight: 900;
+    transition: 0.5s ease-in-out;
+
+    svg {
+        width: auto;
+        height: f.rem(30);
+    }
+
+    span {
+        transition: 0.5s ease-in-out;
+    }
+
+    &:hover {
+        background-color: var(--comColor);
+        color: var(--pickedColor);
+
+        span {
+            color: var(--pickedColor);
+        }
+
+        svg {
+            fill: var(--pickedColor);
+        }
+    }
+
+    &:disabled {
+        background-color: var(--comColor);
+        opacity: 0.5;
+        cursor: not-allowed;
+
+        span {
+            color: var(--pickedColor);
+        }
+    }
+
+    &--col {
+        @extend .button;
+        flex-direction: column;
+    }
+
+    &--row {
+        @extend .button;
+        flex-direction: row;
+    }
+
+    &--outlined {
+        @extend .button;
+        border: f.rem(1) solid var(--comColor);
+    }
+
+    &--invert {
+        @extend .button;
+        color: var(--pickedColor);
+        background-color: var(--comColor);
+
+        span {
+            color: var(--pickedColor);
+        }
+
+        &:hover {
+            background-color: var(--pickedColor);
+            color: var(--comColor);
+
+            span {
+                color: var(--comColor);
+            }
+
+            svg {
+                fill: var(--comColor);
+            }
+        }
+
+        &.active {
+            background-color: var(--pickedColor);
+            color: var(--comColor);
+
+            span {
+                color: var(--comColor);
+            }
+
+            svg {
+                fill: var(--comColor);
+            }
+        }
+    }
+
+    &--nav {
+        position: relative;
+        gap: f.rem(10);
+
+        span {
+            text-align: center;
+        }
+    }
+}
+
+@include m.breakpoint-up("desktop") {
+    .button {
+        &--nav {
+            span {
+                &:not([aria-label="quantity"]) {
+                    position: absolute;
+                    top: calc(100% + f.rem(10));
+                    padding: f.rem(10) f.rem(20);
+                    background-color: var(--comColor);
+                    color: var(--pickedColor);
+                    opacity: 0;
+                }
+            }
+
+            &:hover {
+                span {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}

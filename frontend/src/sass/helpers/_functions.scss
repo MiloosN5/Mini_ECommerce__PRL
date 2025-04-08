@@ -1,0 +1,63 @@
+@use 'sass:math';
+
+@function rem($pixel) {
+  @if math.is-unitless($pixel) {
+    @return math.div($pixel, 16)+rem;
+  }
+
+  @else {
+    @error 'Don\'t use units when using the rem() function; only numbers';
+  }
+}
+
+@function em($pixel) {
+  @if math.is-unitless($pixel) {
+    @return math.div($pixel, 16)+em;
+  }
+
+  @else {
+    @error 'Don\'t use units when using the em() function; only numbers';
+  }
+}
+
+@function fluidValue($min-width, $max-width, $size-min, $size-max) {
+  // Convert width values to rem units
+  $min-width-rem: math.div($min-width, 16) * 1rem;
+  $max-width-rem: math.div($max-width, 16) * 1rem;
+
+  // Convert size values to rem units
+  $size-min-rem: math.div($size-min, 16) * 1rem;
+  $size-max-rem: math.div($size-max, 16) * 1rem;
+
+  // Calculate slope and intercept
+  $slope: math.div($size-max-rem - $size-min-rem, $max-width-rem - $min-width-rem);
+  $intercept: $size-min-rem - ($slope * $min-width-rem);
+
+  // Initialize $return-value
+  $return-value: null;
+
+  @if ($size-max > $size-min) {
+    @if ($size-min < 0 and $size-max < 0) {
+      $return-value: clamp(#{$size-min-rem}, #{$intercept} + $slope * 100vw, #{$size-max-rem});
+    }
+    @else if ($size-min < 0 and $size-max > 0) {
+      $return-value: clamp(#{$size-min-rem}, #{$intercept} + $slope * 100vw, #{$size-max-rem});
+    }
+    @else {
+      $return-value: clamp(#{$size-min-rem}, #{$intercept} + $slope * 100vw, #{$size-max-rem});
+    }
+  }
+  @else {
+    @if ($size-min < 0 and $size-max < 0) {
+      $return-value: clamp(#{$size-max-rem}, #{$intercept} + $slope * 100vw, #{$size-min-rem});
+    }
+    @else if ($size-min > 0 and $size-max < 0) {
+      $return-value: clamp(#{$size-max-rem}, #{$intercept} + $slope * 100vw, #{$size-min-rem});
+    }
+    @else {
+      $return-value: clamp(#{$size-max-rem}, #{$intercept} + $slope * 100vw, #{$size-min-rem});
+    }
+  }
+
+  @return $return-value;
+}

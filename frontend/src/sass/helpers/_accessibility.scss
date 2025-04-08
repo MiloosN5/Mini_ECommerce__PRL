@@ -1,0 +1,14 @@
+@use '../helpers/functions' as f;
+
+.sr-only {
+    position: absolute;
+    width: f.rem(1);
+    height: f.rem(1);
+    margin: f.rem(-1);
+    border: 0;
+    padding: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+}

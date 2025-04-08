@@ -1,0 +1,531 @@
+svg {
+    transition: 0.5s ease-in-out;
+}
+
+.image {
+    &--hero {
+
+        .cls-1,
+        .cls-2transparent {
+            fill: transparent;
+        }
+
+        .cls-2 {
+            fill: var(--pickedColor);
+        }
+
+        .cls-2static {
+            fill: #f4f1ed;
+        }
+
+        .cls-12,
+        .cls-2,
+        .cls-2transparent,
+        .cls-3,
+        .cls-8 {
+            stroke: var(--comColor);
+        }
+
+        .cls-2static,
+        .cls-8static,
+        .cls-12static {
+            stroke: #070707;
+        }
+
+        .cls-12,
+        .cls-12static,
+        .cls-16,
+        .cls-18,
+        .cls-18static,
+        .cls-2,
+        .cls-2static,
+        .cls-2transparent,
+        .cls-3,
+        .cls-5,
+        .cls-5static,
+        .cls-6,
+        .cls-7,
+        .cls-7static,
+        .cls-8,
+        .cls-8static,
+        .cls-9,
+        .cls-9static {
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        .cls-12,
+        .cls-12static,
+        .cls-13,
+        .cls-15,
+        .cls-16,
+        .cls-18,
+        .cls-18static,
+        .cls-2,
+        .cls-2static,
+        .cls-2transparent,
+        .cls-3,
+        .cls-5,
+        .cls-5static,
+        .cls-6,
+        .cls-7,
+        .cls-7static,
+        .cls-8,
+        .cls-8static,
+        .cls-9,
+        .cls-9static {
+            stroke-width: 6px;
+        }
+
+        .cls-3 {
+            fill: #faf9f7;
+        }
+
+        .cls-4 {
+            fill: #1c0e0c;
+        }
+
+        .cls-5,
+        .cls-5static {
+            fill: #c5dcdd;
+        }
+
+        .cls-18,
+        .cls-5,
+        .cls-6,
+        .cls-7,
+        .cls-9 {
+            stroke: var(--comColor);
+        }
+
+        .cls-5static,
+        .cls-7static,
+        .cls-9static,
+        .cls-18static {
+            stroke: #070707;
+        }
+
+        .cls-10,
+        .cls-6 {
+            fill: #ffbf00;
+        }
+
+        .cls-7,
+        .cls-7static {
+            fill: #f46f40;
+        }
+
+        .cls-13,
+        .cls-15,
+        .cls-8,
+        .cls-8static {
+            fill: none;
+        }
+
+        .cls-9,
+        .cls-9static {
+            fill: #efaf00;
+        }
+
+        .cls-11 {
+            fill: #eae5df;
+        }
+
+        .cls-12,
+        .cls-12static {
+            fill: #fffbf8;
+        }
+
+        .cls-13 {
+            stroke: #ffc3d5;
+        }
+
+        .cls-13,
+        .cls-15 {
+            stroke-miterlimit: 10;
+        }
+
+        .cls-14 {
+            font-size: 12px;
+        }
+
+        .cls-15 {
+            stroke: #4b556a;
+        }
+
+        .cls-16,
+        .cls-19 {
+            fill: #c48270;
+        }
+
+        .cls-16 {
+            stroke: #0f0f0f;
+        }
+
+        .cls-17 {
+            fill: #e38e32;
+        }
+
+        .cls-18,
+        .cls-18static {
+            fill: #f9a09b;
+        }
+    }
+
+    &--products {
+        .cls-0A {
+            fill: transparent;
+        }
+
+        .cls-1A {
+            fill: var(--pickedColor);
+        }
+
+        .cls-5A {
+            fill: var(--pickedColor);
+        }
+
+        .cls-2A {
+            fill: var(--comColor);
+        }
+
+        .cls-3A {
+            fill: #efaf00;
+        }
+
+        .cls-10A,
+        .cls-3A {
+            stroke: var(--comColor);
+        }
+
+        .cls-10A,
+        .cls-3A,
+        .cls-4A,
+        .cls-5A,
+        .cls-7A {
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        .cls-10A,
+        .cls-3A,
+        .cls-4A,
+        .cls-5A {
+            stroke-width: 6px;
+        }
+
+        .cls-4A,
+        .cls-7A {
+            fill: none;
+        }
+
+        .cls-4A,
+        .cls-5A,
+        .cls-7A {
+            stroke: var(--comColor);
+        }
+
+        .cls-6A {
+            fill: var(--comColor);
+        }
+
+        .cls-7A {
+            stroke-width: 8px;
+        }
+
+        .cls-8A {
+            fill: #c5dcdd;
+        }
+
+        .cls-9A {
+            fill: var(--pickedColor);
+        }
+
+        .cls-10A {
+            fill: #f46f40;
+        }
+    }
+
+    &--addProduct {
+
+        .cls-1B,
+        .cls-5Btransparent {
+            fill: transparent;
+        }
+
+        .cls-5B {
+            fill: var(--pickedColor);
+        }
+
+        .cls-5Bstatic {
+            fill: #f4f1ed;
+        }
+
+        .cls-2B,
+        .cls-2Bstatic,
+        .cls-9B {
+            fill: #efaf00;
+        }
+
+        .cls-2B,
+        .cls-4B,
+        .cls-7B {
+            stroke: var(--comColor);
+        }
+
+        .cls-2B,
+        .cls-2Bstatic,
+        .cls-4B,
+        .cls-5B,
+        .cls-5Bstatic,
+        .cls-5Btransparent,
+        .cls-7B,
+        .cls-8B {
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            stroke-width: 6px;
+        }
+
+        .cls-3B {
+            fill: var(--comColor);
+        }
+
+        .cls-4B {
+            fill: #c5dcdd;
+        }
+
+        .cls-5B,
+        .cls-5Btransparent,
+        .cls-8B {
+            stroke: var(--comColor);
+        }
+
+        .cls-5Bstatic {
+            stroke: #070707;
+        }
+
+        .cls-6B {
+            fill: #ffeff0;
+        }
+
+        .cls-7B {
+            fill: #f46f40;
+        }
+
+        .cls-8B {
+            fill: none;
+        }
+
+        .cls-10B {
+            fill: #fff;
+        }
+    }
+
+    &--cart {
+
+        .cls-1C,
+        .cls-2Ctransparent {
+            fill: transparent;
+        }
+
+        .cls-2C {
+            fill: var(--pickedColor);
+        }
+
+        .cls-2Cstatic {
+            fill: #f4f1ed;
+        }
+
+        .cls-12C,
+        .cls-2C,
+        .cls-2Cstatic,
+        .cls-2Ctransparent,
+        .cls-3C,
+        .cls-8C {
+            stroke: var(--comColor);
+        }
+
+        .cls-12Cstatic {
+            stroke: #070707;
+        }
+
+        .cls-12C,
+        .cls-12Cstatic,
+        .cls-2C,
+        .cls-2Cstatic,
+        .cls-2Ctransparent,
+        .cls-3C,
+        .cls-5C,
+        .cls-6C,
+        .cls-7C,
+        .cls-8C,
+        .cls-9C {
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        .cls-12C,
+        .cls-12Cstatic,
+        .cls-13C,
+        .cls-2C,
+        .cls-2Cstatic,
+        .cls-2Ctransparent,
+        .cls-3C,
+        .cls-5C,
+        .cls-6C,
+        .cls-7C,
+        .cls-8C,
+        .cls-9C {
+            stroke-width: 6px;
+        }
+
+        .cls-3C {
+            fill: var(--comColor);
+        }
+
+        .cls-4C {
+            fill: var(--comColor);
+        }
+
+        .cls-5C {
+            fill: #c5dcdd;
+        }
+
+        .cls-5C,
+        .cls-6C,
+        .cls-7C,
+        .cls-9C {
+            stroke: var(--comColor);
+        }
+
+        .cls-10C,
+        .cls-6C {
+            fill: #ffbf00;
+        }
+
+        .cls-7C {
+            fill: #f46f40;
+        }
+
+        .cls-13C,
+        .cls-8C {
+            fill: none;
+        }
+
+        .cls-9C {
+            fill: #efaf00;
+        }
+
+        .cls-11C {
+            fill: #eae5df;
+        }
+
+        .cls-12C,
+        .cls-12Cstatic {
+            fill: #fffbf8;
+        }
+
+        .cls-13C {
+            stroke: #ffc3d5;
+            stroke-miterlimit: 10;
+        }
+
+        .cls-14C {
+            font-size: 9.38px;
+            font-family:
+                MyriadPro-Regular,
+                Myriad Pro;
+        }
+    }
+
+    &--auth {
+        .cls-0 {
+            fill: #fff;
+            stroke: #263238;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        .cls-1 {
+            fill: #fff;
+            stroke: #263238;
+            stroke-miterlimit: 10;
+        }
+
+        .cls-2 {
+            fill: #92e3a9;
+        }
+
+        .cls-3 {
+            fill: #fff;
+            opacity: 0.7000000000000001;
+        }
+
+        .cls-4 {
+            opacity: 0.30000000000000004;
+        }
+
+        .cls-5 {
+            fill: #fff;
+        }
+
+        .cls-6 {
+            fill: none;
+            stroke: #92e3a9;
+            stroke-miterlimit: 10;
+        }
+
+        .cls-7 {
+            fill: #fff;
+            opacity: 0.30000000000000004;
+        }
+
+        .cls-8 {
+            fill: #fff;
+            opacity: 0.5;
+        }
+
+        .cls-9 {
+            fill: none;
+            stroke: #263238;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        .cls-10 {
+            fill: #92e3a9;
+            stroke: #263238;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        .cls-11 {
+            fill: #263238;
+            stroke: #263238;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        .cls-12 {
+            font-size: 12px;
+            fill: #fff;
+            font-weight: 700;
+        }
+
+        .cls-13 {
+            fill: none;
+            stroke: #fff;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        .cls-14 {
+            stroke: var(--comColor);
+            fill: transparent;
+        }
+
+        .cls-15 {
+            fill: #263238;
+        }
+    }
+}

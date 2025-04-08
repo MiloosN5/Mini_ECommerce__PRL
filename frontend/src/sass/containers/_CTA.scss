@@ -1,0 +1,8 @@
+@use '../helpers/functions' as f;
+
+.CTA-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: f.rem(10);
+}

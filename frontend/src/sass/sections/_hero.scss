@@ -1,0 +1,27 @@
+@use "../helpers/functions" as f;
+
+.hero-section {
+    &__description {
+        display: flex;
+        flex-direction: column;
+        padding: f.rem(10) f.rem(20);
+        text-align: center;
+        background-color: var(--comColor);
+        color: var(--pickedColor);
+    }
+}
+
+@media (min-width: f.rem(992)) {
+    .hero-section {
+        &__content {
+            .CTA-section__action {
+                max-width: 0;
+
+                span,
+                label {
+                    white-space: nowrap;
+                }
+            }
+        }
+    }
+}

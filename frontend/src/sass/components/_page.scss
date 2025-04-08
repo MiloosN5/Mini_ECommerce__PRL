@@ -1,0 +1,56 @@
+@use "../helpers/functions" as f;
+@use "../helpers/mixins" as m;
+
+.page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    header {
+        position: relative;
+
+        svg {
+            max-width: f.rem(800);
+            opacity: 0;
+        }
+    }
+
+    h2 {
+        font-family: "WindSong", cursive;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        right: 0;
+        transform: translate(0%, -50%);
+        font-size: 10vw;
+        text-align: center;
+        -webkit-text-stroke: f.rem(2) var(--comColor);
+
+        &::before {
+            left: 0;
+            right: 0;
+            position: absolute;
+            z-index: -1;
+            -webkit-text-stroke: f.rem(4) var(--pickedColor);
+            color: transparent;
+        }
+    }
+}
+
+@include m.breakpoint-up("mobileLandscape") {
+    .page {
+        header {
+            svg {
+                opacity: 1;
+            }
+        }
+    }
+}
+
+@include m.breakpoint-up("desktop") {
+    .page {
+        h2 {
+            font-size: f.rem(80);
+        }
+    }
+}

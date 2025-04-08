@@ -1,0 +1,129 @@
+@use "../helpers/functions" as f;
+@use "../helpers/mixins" as m;
+
+.anchor {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.5s ease-in-out;
+  padding: f.rem(10) f.rem(20);
+
+  svg {
+    width: auto;
+    height: f.rem(30);
+  }
+
+  span {
+    color: var(--comColor);
+    transition: 0.5s ease-in-out;
+  }
+
+  &:hover {
+    background-color: var(--comColor);
+    color: var(--pickedColor);
+
+    span {
+      color: var(--pickedColor);
+    }
+
+    svg {
+      fill: var(--pickedColor);
+    }
+  }
+
+  &.active {
+    background-color: var(--comColor);
+    color: var(--pickedColor);
+
+    span {
+      color: var(--pickedColor);
+    }
+
+    svg {
+      fill: var(--pickedColor);
+    }
+  }
+
+  &--col {
+    @extend .anchor;
+    flex-direction: column;
+  }
+
+  &--row {
+    @extend .anchor;
+    flex-direction: row;
+  }
+
+  &--invert {
+    @extend .anchor;
+    color: var(--pickedColor);
+    background-color: var(--comColor);
+
+    span {
+      color: var(--pickedColor);
+    }
+
+    &:hover {
+      background-color: var(--pickedColor);
+      color: var(--comColor);
+
+      span {
+        color: var(--comColor);
+      }
+
+      svg {
+        fill: var(--comColor);
+      }
+    }
+
+    &.active {
+      background-color: var(--pickedColor);
+      color: var(--comColor);
+
+      span {
+        color: var(--comColor);
+      }
+
+      svg {
+        fill: var(--comColor);
+      }
+    }
+  }
+
+  &--nav {
+    position: relative;
+    gap: f.rem(10);
+
+    span {
+      text-align: center;
+    }
+  }
+
+  &--actionBtn {
+    height: 100%;
+  }
+}
+
+@include m.breakpoint-up("desktop") {
+  .anchor {
+    &--nav {
+      span {
+        &:not([aria-label="quantity"]) {
+          position: absolute;
+          top: calc(100% + f.rem(10));
+          padding: f.rem(10) f.rem(20);
+          background-color: var(--comColor);
+          color: var(--pickedColor);
+          opacity: 0;
+        }
+      }
+
+      &:hover {
+        span {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

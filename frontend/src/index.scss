@@ -1,0 +1,12 @@
+@forward '../src/sass/base';
+@forward '../src/sass/components';
+@forward '../src/sass/containers';
+@forward '../src/sass/headers/';
+@forward '../src/sass/helpers';
+@forward '../src/sass/layouts';
+@forward '../src/sass/sections';
+
+:root {
+    --pickedColor: #ffffff;
+    --comColor: #000000;
+}

@@ -1,0 +1,9 @@
+.addProduct-section {
+    &__wrapper {
+        h2 {
+            &:before {
+                content: "Add Product";
+            }
+        }
+    }
+}

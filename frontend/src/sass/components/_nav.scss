@@ -1,0 +1,22 @@
+@use "../helpers/functions" as f;
+@use "../helpers/mixins" as m;
+
+.nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: f.rem(10);
+    gap: f.rem(10);
+
+    &--root {
+        @extend .nav;
+    }
+}
+
+@include m.breakpoint-up("desktop") {
+    .nav {
+        &--root {
+            flex-direction: row;
+        }
+    }
+}

@@ -1,0 +1,9 @@
+.signup-section {
+    &__wrapper {
+        h2 {
+            &:before {
+                content: "Signup";
+            }
+        }
+    }
+}

@@ -1,0 +1,87 @@
+@use "../helpers/functions" as f;
+@use "../helpers/mixins" as m;
+
+.root-header {
+    &__wrapper {
+        margin-inline: auto;
+        padding: f.rem(10);
+    }
+
+    &__content {
+        align-items: stretch;
+    }
+
+    &__logo {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        padding: f.rem(10);
+
+        svg {
+            width: auto;
+            height: f.rem(60);
+        }
+    }
+
+    &__bgColorPicker {
+        display: flex;
+        gap: f.rem(10);
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        padding: f.rem(10);
+
+        label {
+            font-weight: 900;
+            transition: 0.5s ease-in-out;
+        }
+    }
+}
+
+@include m.breakpoint-up("tablet") {
+    .root-header {
+        &__wrapper {
+            padding: f.rem(20);
+        }
+    }
+}
+
+@include m.breakpoint-up("desktop") {
+    .root-header {
+        &__wrapper {
+            padding: f.rem(40);
+        }
+
+        &__content {
+            flex-direction: row;
+        }
+
+        &__logo {
+            max-width: 30%;
+        }
+
+        &__bgColorPicker {
+            align-self: normal;
+
+            label {
+                position: absolute;
+                top: 100%;
+                padding: f.rem(10) f.rem(20);
+                background-color: var(--comColor);
+                color: var(--pickedColor);
+                opacity: 0;
+                right: 0;
+            }
+
+            &:hover {
+                label {
+                    opacity: 1;
+                }
+            }
+
+            input {
+                height: 100%;
+            }
+        }
+    }
+}

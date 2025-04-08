@@ -1,0 +1,32 @@
+@use "../helpers/functions" as f;
+
+input:not([type="color"]) {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    padding: f.rem(10) f.rem(20);
+    transition: 0.5s ease-in-out;
+    border: f.rem(1) solid var(--comColor);
+    color: var(--comColor);
+    font-weight: 900;
+    background-color: transparent;
+
+    &::placeholder {
+        opacity: 0.7;
+        color: var(--comColor);
+    }
+
+    &:-webkit-autofill {
+        box-shadow: 0 0 0 f.rem(1000) var(--comColor) inset;
+        -webkit-text-fill-color: var(--pickedColor);
+        color: var(--pickedColor);
+    }
+
+    &:disabled {
+        background-color: var(--comColor);
+        color: var(--pickedColor);
+        opacity: 0.5;
+        cursor: not-allowed;
+    }
+}
