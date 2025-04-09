@@ -14,6 +14,10 @@
   - [Products & Cart](#products--cart)
   - [Color Picker & Decorative Images)(#color-picker--decorative-images)
 - [Backend](#backend)
+  - [Routes](#routes)
+  - [Authentication system with Laravel Sanctum](#authentication-system-with-laravel-sanctum)
+  - [PostgreSQL as a database](#postgresql-as-a-database)
+  - [Models, Controllers & Migrations](#modules,controllers--migrations)
 - [Credits](#credits)
 
 ## Preview
@@ -100,9 +104,31 @@ Thanks to Redux, this color preference can be used across multiple parts of the 
 
 ## Backend
 
+The backend is responsible for authentication logic, database setup, and data manipulation. It is built using PHP with the Laravel framework. The application follows the MVC architecture and uses a RESTful API approach.
+
+Unlike the traditional MVC structure where views (e.g., Blade templates) are rendered on the server side, this project uses JSON responses to communicate with a separately developed React frontend. Although Laravel can integrate frontend technologies like React using Inertia.js, in this case, the frontend is fully decoupled from the backend and communicates exclusively via API requests.
+
 ### Routes
 
+In the routes directory, Laravel organizes routes into separate files, such as web.php and api.php. Since React is handled outside of the Laravel stack in this project, all routes are defined inside api.php.
+
+Due to the automatic route prefixing configured in Laravel’s bootstrap folder, all api.php routes are automatically prefixed with /api in the URL. 
+
+Routes can be defined in two main ways:
+
+- Using specific HTTP methods:
+
+- Using Route::resource, which automatically generates a full set of RESTful routes (index, show, store, update, destroy). If only a subset of actions is needed, you can limit it using the only() method.
+
 ### Authentication system with Laravel Sanctum
+
+This project uses Laravel Sanctum for API authentication. Sanctum allows issuing personal access tokens, which are then stored and attached to the Authorization header on the frontend.
+
+When the user registers, the register action in the controller first validates the incoming data from the request. If the validation passes, the password is hashed and a new user is created using  (User::create()). Immediately after registration, a new cart is also created for the user (Cart::create()). Finally, an access token is generated using Sanctum (createToken()).
+
+During login, the login action first validates the request data, and then attempts to authenticate the user using (Auth::attempt() & Auth:user()). If authentication is successful, a new token is generated in the same way as during registration. The frontend stores this token and sets it as a Bearer token in the Authorization header for all subsequent API requests using Axios.
+
+On logout, the logout action invalidates all tokens associated with the user by calling (user()->tokens()->delete()). This effectively ends the user's session on the backend and ensures that any previously issued tokens are no longer valid. Since authentication is handled via token-based Bearer authorization and not cookies, CSRF tokens are not required for API requests.
 
 ### PostgreSQL as a database
 
