@@ -9,6 +9,7 @@
 ## Preview
 
 <img src="./frontend/public/preview/MiniECommerce__LinkedIn__1.png"  width="100%;" height="auto" alt="" />
+<img src="./frontend/public/preview/MiniECommerce__LinkedIn__2.png"  width="100%;" height="auto" alt="" />
 
 ## About
 
