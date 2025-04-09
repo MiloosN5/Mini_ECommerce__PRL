@@ -12,12 +12,12 @@
   - [Authentication System](#authentication-system)
   - [Guarded Routes](#guarded-routes)
   - [Products & Cart](#products--cart)
-  - [Color Picker & Decorative Images)(#color-picker--decorative-images)
+  - [Color Picker & Decorative Images](#color-picker--decorative-images)
 - [Backend](#backend)
   - [Routes](#routes)
   - [Authentication system with Laravel Sanctum](#authentication-system-with-laravel-sanctum)
   - [PostgreSQL as a database](#postgresql-as-a-database)
-  - [Models, Controllers & Migrations](#modules,controllers--migrations)
+  - [Models, Controllers & Migrations](#modules-controllers--migrations)
 - [Credits](#credits)
 
 ## Preview
