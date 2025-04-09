@@ -17,7 +17,7 @@
   - [Routes](#routes)
   - [Authentication system with Laravel Sanctum](#authentication-system-with-laravel-sanctum)
   - [PostgreSQL as a database](#postgresql-as-a-database)
-  - [Models, Controllers & Migrations](#modules-controllers--migrations)
+  - [Models, Controllers & Migrations](#models-controllers--migrations)
 - [Credits](#credits)
 
 ## Preview
