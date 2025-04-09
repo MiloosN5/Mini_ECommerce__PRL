@@ -58,7 +58,7 @@ const AddProductForm = () => {
                 />
               </>,
               <>
-                <label>Price of the product</label>
+                <label>Price of the product (in $)</label>
                 <input
                   type="number"
                   name="price"

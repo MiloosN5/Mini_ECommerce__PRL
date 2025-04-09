@@ -206,7 +206,7 @@ const Cart = () => {
         }}
       />
       <div className="cart-container__summary">
-        <p>Total price: {totalPrice}</p>
+        <p>Total price: {totalPrice}$</p>
         <p>Total quantity: {totalQuantity} articles</p>
       </div>
       <Button
