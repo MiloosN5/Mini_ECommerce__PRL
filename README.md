@@ -132,11 +132,31 @@ On logout, the logout action invalidates all tokens associated with the user by 
 
 ### PostgreSQL as a database
 
+Laravel supports a wide range of databases, including PostgreSQL. Models such as Cart, User, and Product are used to define the structure of database tables, specifying which fields each record should contain (e.g., name, price for the Product model).
+
+Controllers handle the business logic and act as intermediaries between the client (frontend) and the database. Since the structure of database tables may evolve over time, Laravel migrations are used to apply changes using the built-in up and down methods.
+
+The client communicates with the backend through API requests sent using the Axios library. Axios handles sending requests and automatically parses JSON responses into usable JavaScript objects.
+
+Laravel’s Eloquent ORM (Object Relational Mapper) simplifies database interactions by allowing developers to work with database records as if they were standard PHP objects. This includes defining relationships between models (such as one-to-one or one-to-many), automatically mapping foreign keys, and using expressive syntax to interact with the database.
+
 ### Models, Controllers & Migrations
 
-### CSRF & CORS Configurations
+Laravel models can include predefined properties like $fillable, which specifies which fields are mass-assignable (i.e., can be safely filled with data from a request), and $hidden, which defines which attributes should be excluded when the model is converted to JSON (for example, hiding the password field).
 
+Additionally, the $casts property allows you to specify how certain attributes should be cast, such as converting a timestamp into a date or a string into a boolean.
 
+Model relationships can also be defined through Eloquent methods like hasOne, hasMany, and belongsTo. For instance, in the User model, you can define a hasOne relationship to a Cart, indicating that each user can have one cart. On the other hand, the Cart model would define a belongsTo relationship back to the User, since the carts table contains a user_id foreign key that references the users table.
+
+Controllers coordinate the logic for each route. Each route is typically associated with a method (or “action”) in a controller. For example, when a route calls the index action for a resource like Product, the controller is expected to return a list of all product records. This is often done using Product::all().
+
+Migrations in Laravel follow a clear structure. Once initial migrations are applied, further database changes should be made via new migration files rather than altering old ones. The migration file names usually follow a naming convention like create_products_table, where the prefix is automatically generated based on the timestamp.
+
+For the first creation of a table, Schema::create() is used in the up method, and Schema::dropIfExists() in the down method. For subsequent modifications to existing tables, Schema::table() is used instead of create(), since the table already exists.
+
+One powerful feature of migrations is the ability to define cascading deletions. For example, if a user is deleted, their associated cart should be deleted automatically. This is achieved by using methods like foreignId('user_id')->constrained()->onDelete('cascade'), where constrained() links the foreign key to the related table (in this case, users), and onDelete('cascade') ensures related records are deleted as well.
+
+### CORS Configurations
 
 
 ## Credits
