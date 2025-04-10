@@ -67,6 +67,90 @@ A website designed to help users conveniently order the products they need onlin
     - CORS Configuration
    
 ## Local Installation
+
+***Prerequisites***
+
+Before getting started, make sure you have the following installed on your machine:
+
+1. A code editor (e.g., Visual Studio Code)
+2. PostgreSQL
+3. PHP & Composer
+
+***Steps***
+
+1. Clone the repository
+
+    Open your terminal and run:
+
+    ```bash
+   git clone https://github.com/MiloosN5/Mini_ECommerce__PRL.git
+    ```
+
+    Then navigate into the project folder:
+
+    ```bash
+   cd Mini_ECommerce__PRL
+    ```
+
+4. Configure environment variables
+
+    Navigate to the Backend directory and open the .env.example file.   
+    Replace all instances of #YOUR_VALUE with your actual PostgreSQL credentials (e.g., database name, username, and password).
+
+5. Install backend dependencies
+
+    In the Backend folder, run:
+
+    ```bash
+   composer install
+    ```
+
+    This installs all PHP dependencies required to run Laravel.
+
+4. Install frontend dependencies
+
+    In the Frontend folder, run:
+
+    ```bash
+   npm install
+    ```
+
+    This installs all JavaScript packages needed to run the React frontend.
+
+7. Run database migrations
+
+    In the Backend folder, run:
+
+    ```bash
+   php artisan migrate
+    ```
+
+    This command creates all necessary tables in your PostgreSQL database using Laravel’s migration system.
+
+9. Start the backend server
+
+    Still in the Backend folder, run:
+
+    ```bash
+   php artisan serve
+    ```
+
+    This will start the Laravel server (by default at http://127.0.0.1:8000).   
+    If that doesn’t work, you can use the built-in PHP server as an alternative:
+
+    ```bash
+   php -S localhost:8000 -t public
+    ```
+
+11. Start the frontend development server
+
+    In the Frontend folder, run:
+
+    ```bash
+    npm run dev
+    ```
+
+    This starts the React development server (usually at http://localhost:5173 or similar).
    
 ## Frontend
 
