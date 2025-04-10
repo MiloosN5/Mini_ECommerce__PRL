@@ -160,3 +160,33 @@ One powerful feature of migrations is the ability to define cascading deletions.
 
 
 ## Credits
+
+- Navbar Icons
+  - URL (Home): [Link](https://uxwing.com/home-icon/)
+  - URL (Dashboard): [Link](https://uxwing.com/four-squares-line-icon/)
+  - URL (Products): [Link](https://uxwing.com/boxes-icon/)
+  - URL (AddProduct): [Link](https://uxwing.com/package-add-icon/)
+  - URL (Cart): [Link](https://uxwing.com/shopping-bag-icon/)
+  - URL (Login): [Link](https://uxwing.com/login-icon/)
+  - URL (Signup): [Link](https://uxwing.com/signup-icon/)
+  - URL (Logout): [Link](https://uxwing.com/logout-icon/)
+  - Platform: [Uxwing](https://uxwing.com/)
+  - License: [Link](https://uxwing.com/license/)
+- Decorative Images (Home, Products, AddProduct & Cart)
+  - URL: [Link](https://www.drawkit.com/illustrations/online-shopping-illustrations)
+  - Platform: [DrawKit](https://www.drawkit.com/)
+  - License: [Link](https://www.drawkit.com/license)
+- Decorative Images (Login & Signup)
+  - URL: [Link](https://storyset.com/illustration/account/bro) 
+  - Platform: [Storyset](https://storyset.com/)
+  - License: [Link](https://www.freepik.com/legal/terms-of-use) (Freepik License)
+- Products (Unknown Icon)
+  - URL: [Link](https://iconscout.com/icon/unknown-file-8212365)
+  - Author: [Venus](https://iconscout.com/contributors/graphic-room)
+  - Platform: [IconScout](https://iconscout.com/)
+  - License: [Link](https://iconscout.com/licenses#iconscout)
+- Products (Fruits Icons)
+  - URL: [Link](https://iconscout.com/free-icon-pack/fruits-icon-set-line-styles_105953)
+  - Author: [nanoagency](https://iconscout.com/contributors/nanoagency/icons)
+  - Platform: [IconScout](https://iconscout.com/)
+  - License: [Link](https://iconscout.com/licenses#iconscout)
