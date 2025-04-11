@@ -1,10 +1,10 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "axios";
 
-const csrfToken = document
-  .querySelector('meta[name="csrf-token"]')
-  ?.getAttribute("content");
-axios.defaults.headers.common["X-CSRF-TOKEN"] = csrfToken;
+// const csrfToken = document
+//   .querySelector('meta[name="csrf-token"]')
+//   ?.getAttribute("content");
+// axios.defaults.headers.common["X-CSRF-TOKEN"] = csrfToken;
 
 export const fetchUserData = createAsyncThunk(
   "auth/fetchUserData",

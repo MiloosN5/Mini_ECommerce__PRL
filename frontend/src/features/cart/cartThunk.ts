@@ -2,10 +2,10 @@ import { createAsyncThunk } from "@reduxjs/toolkit";
 import { RootState } from "../../store/store";
 import axios from "axios";
 
-const csrfToken = document
-  .querySelector('meta[name="csrf-token"]')
-  ?.getAttribute("content");
-axios.defaults.headers.common["X-CSRF-TOKEN"] = csrfToken;
+// const csrfToken = document
+//   .querySelector('meta[name="csrf-token"]')
+//   ?.getAttribute("content");
+// axios.defaults.headers.common["X-CSRF-TOKEN"] = csrfToken;
 
 export const fetchCart = createAsyncThunk(
   "cart/fetchCart",
