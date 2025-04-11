@@ -1,5 +1,8 @@
 # Mini ECommerce__PRL
 
+- Live [❌]
+- PRL: PostgreSQL + React + Laravel
+
 ## Table of contents
 
 - [Preview](#preview)
